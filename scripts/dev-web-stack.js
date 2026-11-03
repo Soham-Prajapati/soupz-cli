@@ -177,7 +177,7 @@ async function startFreeTunnels(webPort) {
   const sshArgs = (port) => [
     '-p', '443',
     `-R0:localhost:${port}`,
-    '-o', 'StrictHostKeyChecking=no',
+    '-o', 'StrictHostKeyChecking=accept-new',
     '-o', 'ServerAliveInterval=30',
     'a.pinggy.io'
   ];
