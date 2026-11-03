@@ -36,8 +36,9 @@ import {
 // Defaults: the user's home directory, the repo root, and the daemon's cwd.
 // Widen it when you genuinely need to, with a colon-separated list:
 //     SOUPZ_ALLOWED_ROOTS=/Volumes/work:/opt/src
+const rootsDelimiter = process.platform === 'win32' ? ';' : ':';
 const ALLOWED_ROOT_BASES = (process.env.SOUPZ_ALLOWED_ROOTS
-    ? process.env.SOUPZ_ALLOWED_ROOTS.split(':')
+    ? process.env.SOUPZ_ALLOWED_ROOTS.split(rootsDelimiter)
     : [os.homedir(), REPO_ROOT, process.cwd()]
 ).filter(Boolean).map((p) => resolve(p));
 
