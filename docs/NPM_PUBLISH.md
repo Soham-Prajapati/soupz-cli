@@ -38,7 +38,7 @@ Key fields:
 - **name**: Must be `soupz-cli`
 - **version**: Semantic versioning (e.g., `0.1.0`, `1.0.0`)
 - **bin**: Entry point for CLI (should point to `bin/soupz.js`)
-- **repository / bugs / homepage**: Must point to `https://github.com/soupz/cli`
+- **repository / bugs / homepage**: Set these once the public repo exists; until then they may be omitted (and tests currently expect them to be omitted).
 - **type**: "module" for ESM support
 - **engines**: Node.js >=18 requirement
 
